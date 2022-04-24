@@ -1,0 +1,152 @@
+{% extends 'base-landing.html' %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+
+{% block title %}Bamaitc{% endblock title %}
+
+
+
+
+
+{% block main %}
+
+
+    <div class="col-lg-12">
+        {% if desined %}
+
+        <h4 class="mb-4">آیتم های نمونه کار</h4>
+                        <div class="carousel" data-items="3" data-lightbox="gallery">
+
+                            {% for item in desined %}
+
+                            <div class="portfolio-item img-zoom ct-photography ct-marketing ct-media">
+                                <div class="portfolio-item-wrap">
+                                    <div class="portfolio-image">
+                                        <a href="#"><img src="media/{{ item.image }}" alt=""></a>
+                                    </div>
+                                    <div class="portfolio-description">
+                                        <a href="{{ item.url }}">
+                                            <h3>{{ item.name }}</h3>
+                                            <span>{{ item.desc|truncatewords:3 }}</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% endfor %}
+
+
+                        </div>
+            <div class="line"></div>
+
+
+        {% endif %}
+
+        {% if app %}
+
+        <h4 class="mb-4">نمونه اپلیکیشن</h4>
+                        <div class="carousel team-members team-members-shadow" data-items="3">
+
+                            {% for appli in app %}
+
+                            <div class="team-member">
+                                <div class="team-image">
+                                    <img src="media/{{ appli.image }}">
+                                </div>
+                                <div class="team-desc">
+                                    <h3>{{ appli.name }}</h3>
+                                    <span>{{ appli.plat }}</span>
+                                    <p>{{ appli.desc|truncatewords:6 }}</p>
+                                    <div class="align-center">
+                                        <a class="btn btn-xs btn-slide btn-light" href="{{ appli.url }}">
+                                            <i class="icon-arrow-down-circle"></i>
+                                            <span>دانلود</span></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% endfor %}
+                            
+                            
+                            
+                        </div>
+
+                        <div class="line"></div>
+                        
+            {% endif %}
+
+
+            <div class="heading-text heading-section text-center">
+                <h2>کاری که ما انجام می دهیم</h2>
+                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم، لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم.</p>
+            </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="icon-box effect medium border center">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-plug"></i></a>
+                            </div>
+                            <h3>قالب قدرتمند</h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم، لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="icon-box effect medium border center">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-desktop"></i></a>
+                            </div>
+                            <h3>طرح بندی های انعطاف پذیر</h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم، لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="icon-box effect medium border center">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-cloud"></i></a>
+                            </div>
+                            <h3>رتینا آماده</h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم، لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="icon-box effect medium border center">
+                            <div class="icon">
+                                <a href="#"><i class="far fa-lightbulb"></i></a>
+                            </div>
+                            <h3>پردازش سریع</h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم، لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="icon-box effect medium border center">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-trophy"></i></a>
+                            </div>
+                            <h3>رنگ های نامحدود</h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم، لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="icon-box effect medium border center">
+                            <div class="icon">
+                            <a href="#"><i class="fa fa-thumbs-up"></i></a>
+                            </div>
+                        <h3>اسلایدرهای پریمیوم</h3>
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم، لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم.</p>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="line"></div>
+
+
+    </div>
+
+
+{% endblock main %}
+
+
+
+
